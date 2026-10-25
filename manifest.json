@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "AINS Studio Glasswing for Edge",
+  "version": "5.0.0",
+  "description": "Glasswing brings AINS Studio reading tools and appearance controls to Microsoft Edge.",
+  "action": {
+    "default_title": "Open AINS Studio settings"
+  },
+  "background": { "service_worker": "background.js" },
+  "permissions": ["storage", "scripting"],
+  "host_permissions": ["https://ains.moe.gov.my/web/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://ains.moe.gov.my/web/*"],
+      "js": ["theme.js", "bulk-import.js", "studio-dashboard.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
